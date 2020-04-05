@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC6_single_match</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f356e5df-7b94-4004-acf5-0f7d90dddb11</testCaseGuid>
+   <variable>
+      <defaultValue>'admin@admin.com\r\n'</defaultValue>
+      <description></description>
+      <id>54a7024f-ac97-40ad-a3a9-6b594e4e0096</id>
+      <masked>false</masked>
+      <name>InputEmail</name>
+   </variable>
+   <variable>
+      <defaultValue>'password\r\n'</defaultValue>
+      <description></description>
+      <id>13fc5f3e-a4c0-4de8-92f6-3966d5d953cd</id>
+      <masked>false</masked>
+      <name>InputPassword</name>
+   </variable>
+</TestCaseEntity>
