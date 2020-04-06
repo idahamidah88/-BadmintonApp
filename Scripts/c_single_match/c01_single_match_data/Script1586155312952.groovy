@@ -15,21 +15,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('page_login/TC3_login_berhasil'), [('email') : 'admin@admin.com', ('password') : 'password'], 
-    FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('')
 
-WebUI.waitForPageLoad(2, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object_SingleMatch/button_Lets Play'))
-
-WebUI.click(findTestObject('Object_SingleMatch/a_Single Match'))
+WebUI.navigateToUrl(GlobalVariable.urlFormSingle)
 
 WebUI.setText(findTestObject('Object_SingleMatch/input_Nama Tim_timA-input'), 'Indomie')
 
-WebUI.click(findTestObject('Object_CounterSingle/NamaPemain_A'))
+WebUI.click(findTestObject('Object_FormSingle/div_Nama Pemain_multiselect__tags_A'))
 
 if (true) {
-    WebUI.selectOptionByValue(findTestObject('Object_CounterSingle/span_Farhan'), 'Farhan', false)
+    WebUI.selectOptionByLabel(findTestObject('Object_CounterSingle/span_Farhan'), 'Farhan', false)
 }
 
 WebUI.setText(findTestObject('Object_SingleMatch/input_Nama Tim_timB-input'), 'Sedap')

@@ -24,7 +24,7 @@ WebUI.navigateToUrl(GlobalVariable.urlFormSingle)
 
 WebUI.click(findTestObject('Object_SingleMatch/button_Submit'))
 
-not_run: WebUI.waitForPageLoad(3, FailureHandling.STOP_ON_FAILURE)
+WebUI.waitForPageLoad(3)
 
 WebUI.click(findTestObject('Object_CounterSingle/button_plus_A'))
 
@@ -39,14 +39,12 @@ WebUI.click(findTestObject('Object_CounterSingle/button_Reset Score'))
 WebUI.delay(3)
 
 for (def index : (1..10)) {
-    //    WebUI.waitForElementPresent(findTestObject('Object_CounterSingle/button_plus_B'), 3)
     WebUI.click(findTestObject('Object_CounterSingle/button_plus_B'))
 }
 
 WebUI.waitForElementPresent(findTestObject('Object_CounterSingle/button_plus_A'), GlobalVariable.waitPresentTimeout)
 
 for (def index : (1..20)) {
-    //    WebUI.waitForElementPresent(findTestObject('Object_CounterSingle/button_plus_B'), 3)
     WebUI.click(findTestObject('Object_CounterSingle/button_plus_A'))
 }
 
